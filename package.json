@@ -1,0 +1,23 @@
+{
+  "name": "moj-projekt",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pGorzycki/PGRepository.git"
+  },
+  "author": "Piotr Gorzycki",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pGorzycki/PGRepository/issues"
+  },
+  "homepage": "https://github.com/pGorzycki/PGRepository#readme",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-sass": "^2.0.0"
+  }
+}
