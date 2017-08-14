@@ -39,7 +39,7 @@ function setGameElements() {
         resultsElem.style.display = 'none';
   }
 }
-setGameElements();
+setGameElements(); 
 
 var playerPickElem = document.getElementById('js-playerPick'),
     computerPickElem = document.getElementById('js-computerPick'),
@@ -101,9 +101,14 @@ function checkRoundWinner(playerPick, computerPick) {
     if (winnerIs == 'player') {
         playerResultElem.innerHTML = "Win!";
         player.score++;
+        playerPointsElem.innerHTML++;
+        result();
+
     } else if (winnerIs == 'computer') {
         computerResultElem.innerHTML = "Win!";
         computer.score++;
+        computerPointsElem.innerHTML++;
+        result();
     }
 
 }
@@ -119,13 +124,15 @@ function playerPick(playerPick) {
 
 function result() {
 	if (player.score == 10) {
-		alert(player.name + ' is a winner!');
-		gameState = 'ended';
+		alert(player.name + ' reached ' + player.score + ' points and is a winner!');
 		newGameBtn.innerHTML = 'Play again';
-	} else if (computer.score == 10) {
-		alert('Computer is a winner!');
 		gameState = 'ended';
+		setGameElements();
+	} 
+	else if (computer.score == 10) {
+		alert('Computer reached ' + computer.score + ' points and is a winner!');
 		newGameBtn.innerHTML = 'Play again';
+		gameState = 'ended';
+		setGameElements();
 	}
 }
- result();
